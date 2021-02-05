@@ -1,11 +1,11 @@
 # Startup configuration of Spring-cloud-kubernetes
 spring:
   application:
-    name: integracao-atendimento
+    name: fuse-oracle-example
   cloud:
     kubernetes:
       reload:
         # Enable live reload on ConfigMap change (disabled for Secrets by default)
         enabled: true
       secrets:
-        paths: /etc/secrets/integracao-atendimento
+        paths: /etc/secrets/fuse-oracle-example
