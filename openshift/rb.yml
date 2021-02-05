@@ -1,0 +1,27 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: view-fuse-oracle-example
+  namespace: app-fuse-oracle-example
+subjects:
+  - kind: ServiceAccount
+    name: fuse-oracle-example
+    namespace: app-fuse-oracle-example
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: view-default
+  namespace: app-fuse-oracle-example
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: app-fuse-oracle-example
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: view
